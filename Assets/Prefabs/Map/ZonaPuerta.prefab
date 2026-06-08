@@ -53,7 +53,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.35253906, y: 2.2503796, z: 2.5099487}
+  m_Size: {x: 0.5, y: 2.5, z: 3}
   m_Center: {x: -0.32373047, y: -0.62518954, z: -0.24664307}
 --- !u!114 &7750780172621188903
 MonoBehaviour:
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbeed074185042f4086beab2da0e3620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GeneradorVaca
-  prefabVaca: {fileID: 3276013054065708709, guid: e1635731835bc5b48bf76302e1d4cec4, type: 3}
+  prefabVaca: {fileID: 6322595526281023448, guid: 0a90093862acc5243ba74ed625af87a9, type: 3}
   puntoAparicion: {fileID: 1775764914969685964}
 --- !u!1 &8357037492610889523
 GameObject:
@@ -94,7 +94,7 @@ Transform:
   m_GameObject: {fileID: 8357037492610889523}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.316, y: -0.95, z: 0.502}
+  m_LocalPosition: {x: -0.21, y: -1.95, z: 0.502}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

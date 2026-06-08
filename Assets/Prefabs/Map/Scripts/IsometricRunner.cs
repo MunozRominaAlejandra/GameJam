@@ -4,7 +4,7 @@ using UnityEngine;
 public class IsometricRunner : MonoBehaviour
 {
     [Header("Configuración de Movimiento (Sin Arcos)")]
-    [SerializeField] private float moveSpeed = 6f;
+    [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float turnSpeed = 1200f; // Rotación súper rápida para que gire en el lugar
 
     private CharacterController controller;
@@ -18,8 +18,8 @@ public class IsometricRunner : MonoBehaviour
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
 
-        // Inicia corriendo hacia arriba-derecha
-        currentMoveDirection = new Vector3(1, 0, 1).normalized;
+        // Inicia corriendo hacia arriba
+        currentMoveDirection = new Vector3(1, 0, 0).normalized;
     }
 
     private void Update()
@@ -37,7 +37,7 @@ public class IsometricRunner : MonoBehaviour
         // 1. EL SECRETO: Cambiamos la dirección de movimiento de forma INSTANTÁNEA al tocar la tecla
         if (inputDir.magnitude >= 0.1f)
         {
-            currentMoveDirection = Quaternion.Euler(0, 45, 0) * inputDir;
+            currentMoveDirection = Quaternion.Euler(0, 90, 0) * inputDir;
         }
 
         // 2. MOVIMIENTO FÍSICO: Nos movemos usando la dirección instantánea, NO el 'transform.forward'
