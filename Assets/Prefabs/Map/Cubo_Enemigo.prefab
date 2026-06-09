@@ -155,10 +155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31c0a113621e1b545ba7a35368e433cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemigoInteligente
-  velocidadVagar: 1.5
-  velocidadPersecucion: 4
-  radioDeteccion: 10
-  radioVagar: 8
+  velocidadVagar: 2.5
+  velocidadPersecucion: 5
+  radioDeteccion: 8
+  radioVagar: 7
   sonidoDeteccion: {fileID: 8300000, guid: e092b2f8028163a48a3acbf1d995b7d9, type: 3}
 --- !u!195 &747043161915800833
 NavMeshAgent:
