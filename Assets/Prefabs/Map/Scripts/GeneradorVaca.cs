@@ -3,18 +3,39 @@ using UnityEngine;
 public class GeneradorVaca : MonoBehaviour
 {
     [Header("Configuración")]
-    public GameObject prefabVaca; // Arrastrá acá tu Cubo_Vaca convertido en Prefab
-    public Transform puntoAparicion; // Un GameObject vacío donde querés que spawnee (ej. un metro fuera de la casa)
-    private bool yaVaciado = false; // Para que no spawnee vacas infinitas
+    public GameObject prefabVaca;
+    public Transform puntoAparicion; // Usando tu nombre original
+
+    [Header("Control de Generación")]
+    public int limiteVacas = 1; // Podés cambiar este número en el Inspector
+    private int vacasGeneradas = 0;
 
     private void OnTriggerEnter(Collider otro)
     {
-        // Si entra el prota y todavía no robamos esta casa
-        if (otro.CompareTag("Player") && !yaVaciado)
+        // Verifica si el que atraviesa la caja es el jugador
+        if (otro.CompareTag("Player"))
         {
-            Instantiate(prefabVaca, puntoAparicion.position, Quaternion.identity);
-            yaVaciado = true;
-            Debug.Log("¡Vaca liberada!");
+            // Verifica si todavía no alcanzó el límite configurado
+            if (vacasGeneradas < limiteVacas)
+            {
+                GenerarVaca();
+            }
+        }
+    }
+
+    private void GenerarVaca()
+    {
+        if (prefabVaca != null && puntoAparicion != null)
+        {
+            // Crea la vaca en el punto de aparición
+            Instantiate(prefabVaca, puntoAparicion.position, puntoAparicion.rotation);
+
+            // Suma 1 al contador para que no genere infinitas
+            vacasGeneradas++;
+        }
+        else
+        {
+            Debug.LogWarning("Falta asignar el Prefab Vaca o el Punto Aparicion en el Inspector.");
         }
         if(GameManager.Instance != null)
             {

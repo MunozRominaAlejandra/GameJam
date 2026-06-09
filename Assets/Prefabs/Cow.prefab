@@ -9,6 +9,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ee4cd2f985e86db4fbd68df22076e877, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee4cd2f985e86db4fbd68df22076e877, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee4cd2f985e86db4fbd68df22076e877, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ee4cd2f985e86db4fbd68df22076e877, type: 3}
       propertyPath: m_LocalPosition.x
       value: -241.75903
       objectReference: {fileID: 0}
@@ -50,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ee4cd2f985e86db4fbd68df22076e877, type: 3}
       propertyPath: m_Name
-      value: Cow 1
+      value: Cow
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: ee4cd2f985e86db4fbd68df22076e877, type: 3}
       propertyPath: m_Controller
@@ -72,6 +84,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ee4cd2f985e86db4fbd68df22076e877, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1992257266365631386}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ee4cd2f985e86db4fbd68df22076e877, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2210061902761979346}
   m_SourcePrefab: {fileID: 100100000, guid: ee4cd2f985e86db4fbd68df22076e877, type: 3}
 --- !u!1 &6322595526281023448 stripped
 GameObject:
@@ -214,9 +229,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2ed594ef5548544783886307b9d4688, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VacaSeguidora
-  velocidad: 3.5
+  velocidad: 6
   distanciaParaFrenar: 1.5
-  sonidosBalidos: []
+  sonidosBalidos:
+  - {fileID: 8300000, guid: c9eb9c5cac5a1a54684087cb98a0d844, type: 3}
   tiempoMinimoEntreSonidos: 4
   tiempoMaximoEntreSonidos: 8
 --- !u!136 &1992257266365631386
@@ -242,3 +258,17 @@ CapsuleCollider:
   m_Height: 2.5136108
   m_Direction: 2
   m_Center: {x: -0.102386475, y: 0.90530473, z: 0.60409546}
+--- !u!114 &-2210061902761979346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6322595526281023448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1949828d1b0b194dbf81e7ca6589711, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EfectoCrecimiento
+  tiempoCrecimiento: 45
+  "tama\xF1oFinal": {x: 1, y: 1, z: 1}
