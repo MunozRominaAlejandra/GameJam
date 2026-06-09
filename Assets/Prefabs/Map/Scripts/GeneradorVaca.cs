@@ -16,5 +16,13 @@ public class GeneradorVaca : MonoBehaviour
             yaVaciado = true;
             Debug.Log("¡Vaca liberada!");
         }
+        if(GameManager.Instance != null)
+            {
+            GameManager.Instance.AddCow();
+        }
+            else
+        {
+            Debug.LogWarning("No se encontró el GameManager en la escena para sumar los puntos.");
+        }
     }
 }
