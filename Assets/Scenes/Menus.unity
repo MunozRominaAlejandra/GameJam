@@ -1534,7 +1534,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &357568459
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2035,7 +2035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &422123811
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3283,7 +3283,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Creado por:\n\nMu\xF1ozRominaAlejandra\n"
+  m_text: "Creado por:\n\nCussi Walter Leonel\nMu\xF1ozRominaAlejandra\nFranco Octavio
+    Vilte"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8546efaad2d53f4c9b2f7cad1fa5b4f, type: 2}
   m_sharedMaterial: {fileID: 4418926513304405515, guid: b8546efaad2d53f4c9b2f7cad1fa5b4f, type: 2}
@@ -3310,8 +3311,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
