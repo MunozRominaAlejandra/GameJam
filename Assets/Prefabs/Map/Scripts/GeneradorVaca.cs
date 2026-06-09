@@ -37,5 +37,13 @@ public class GeneradorVaca : MonoBehaviour
         {
             Debug.LogWarning("Falta asignar el Prefab Vaca o el Punto Aparicion en el Inspector.");
         }
+        if(GameManager.Instance != null)
+            {
+            GameManager.Instance.AddCow();
+        }
+            else
+        {
+            Debug.LogWarning("No se encontró el GameManager en la escena para sumar los puntos.");
+        }
     }
 }

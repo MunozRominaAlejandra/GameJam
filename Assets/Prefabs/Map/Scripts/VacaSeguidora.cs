@@ -80,6 +80,14 @@ public class VacaSeguidora : MonoBehaviour
         if (colision.gameObject.CompareTag("Enemigo"))
         {
             Debug.Log("¡Vaca robada!");
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.RemoveCow();
+            }
+            else
+            {
+                Debug.LogWarning("No se encontró el GameManager en la escena para restar los puntos.");
+            }
             Destroy(gameObject);
         }
     }
