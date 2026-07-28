@@ -4,10 +4,10 @@ public class GeneradorVaca : MonoBehaviour
 {
     [Header("Configuración")]
     public GameObject prefabVaca;
-    public Transform puntoAparicion; // Usando tu nombre original
+    public Transform puntoAparicion;
 
     [Header("Control de Generación")]
-    public int limiteVacas = 1; // Podés cambiar este número en el Inspector
+    public int limiteVacas = 1; // Cantidad máxima de vacas que puede entregar este spawnpoint
     private int vacasGeneradas = 0;
 
     private void OnTriggerEnter(Collider otro)
@@ -27,23 +27,25 @@ public class GeneradorVaca : MonoBehaviour
     {
         if (prefabVaca != null && puntoAparicion != null)
         {
-            // Crea la vaca en el punto de aparición
+            // 1. Crea la vaca en el punto de aparición
             Instantiate(prefabVaca, puntoAparicion.position, puntoAparicion.rotation);
 
-            // Suma 1 al contador para que no genere infinitas
+            // 2. Suma 1 al contador local para no generar infinitas
             vacasGeneradas++;
+
+            // 3. Le avisa al GameManager para incrementar la manada y el multiplicador de puntos
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.AddCow();
+            }
+            else
+            {
+                Debug.LogWarning("No se encontró el GameManager en la escena para sumar los puntos.");
+            }
         }
         else
         {
             Debug.LogWarning("Falta asignar el Prefab Vaca o el Punto Aparicion en el Inspector.");
-        }
-        if(GameManager.Instance != null)
-            {
-            GameManager.Instance.AddCow();
-        }
-            else
-        {
-            Debug.LogWarning("No se encontró el GameManager en la escena para sumar los puntos.");
         }
     }
 }
