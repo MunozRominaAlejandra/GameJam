@@ -3253,7 +3253,7 @@ RectTransform:
   m_GameObject: {fileID: 839983817}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 357568459}
@@ -3283,8 +3283,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Creado por:\n\nCussi Walter Leonel\nMu\xF1ozRominaAlejandra\nFranco Octavio
-    Vilte"
+  m_text: "EnderGrupo:\nCussi Walter Leonel\nEstrada Luis Brian\n\nCreado originalmente
+    por:\n\nCussi Walter Leonel\nMu\xF1ozRominaAlejandra\nFranco Octavio Vilte"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b8546efaad2d53f4c9b2f7cad1fa5b4f, type: 2}
   m_sharedMaterial: {fileID: 4418926513304405515, guid: b8546efaad2d53f4c9b2f7cad1fa5b4f, type: 2}
@@ -3977,11 +3977,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1220793488}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1e937e93a4c42c47bb5b7e225a1d1a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 6580f47b977d49f4e83672a1f877302a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   score: 0
-  level: 0
+  puntosBasePorSegundo: 5
+  multiplicadorExtraPorVaca: 0.5
+  cows: 0
+  panelPausa: {fileID: 0}
+  panelGameOver: {fileID: 0}
+  videoPlayerMeme: {fileID: 0}
+  textoPuntajes: {fileID: 0}
+  textoPuntos: {fileID: 0}
 --- !u!4 &1220793490
 Transform:
   m_ObjectHideFlags: 0

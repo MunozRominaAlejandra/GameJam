@@ -231,6 +231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::VacaSeguidora
   velocidad: 6
   distanciaParaFrenar: 1.5
+  velocidadRotacion: 200
   sonidosBalidos:
   - {fileID: 8300000, guid: c9eb9c5cac5a1a54684087cb98a0d844, type: 3}
   tiempoMinimoEntreSonidos: 4
